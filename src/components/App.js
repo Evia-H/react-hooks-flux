@@ -3,15 +3,19 @@ import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
 import Header from "./common/Header";
 import Courses from "./CoursesPage";
-import { Route } from "react-router-dom";
+import PageNotFound from "./NotFoundPage";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="container-fluid">
       <Header />
-      <Route path="/" exact component={HomePage} />
-      <Route path="/courses" component={Courses} />
-      <Route path="/about" component={AboutPage} />
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/courses" component={Courses} />
+        <Route path="/about" component={AboutPage} />
+        <Route component={PageNotFound} />
+      </Switch>
     </div>
   );
 }
