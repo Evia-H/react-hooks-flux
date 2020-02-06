@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CourseForm from "./CourseForm";
-import * as courseApi from "../api/courseApi";
+import courseStore from "../store/courseStore";
+import * as courseActions from "../actions/courseActions";
 import { toast } from "react-toastify";
 
 const ManageCoursePage = props => {
@@ -13,6 +14,12 @@ const ManageCoursePage = props => {
     category: ""
   });
 
+  useEffect(() => {
+    const slug = props.match.params.slug;
+    if (slug) {
+      setCourse(courseStore.getCourseBySlug(slug));
+    }
+  }, [props.match.params.slug]);
   function handleChange({ target }) {
     setCourse({
       ...course,
@@ -23,7 +30,7 @@ const ManageCoursePage = props => {
     let _errors = {};
 
     if (!course.title) _errors.title = "Title is required";
-    if (!course.autherId) _errors.authorId = "Author ID is required";
+    if (!course.authorId) _errors.authorId = "Author ID is required";
     if (!course.category) _errors.category = "Category is required";
 
     setErrors(_errors);
@@ -34,7 +41,7 @@ const ManageCoursePage = props => {
   function handleSubmit(event) {
     event.preventDefault();
     if (!formIsValid()) return;
-    courseApi.saveCourse(course).then(() => {
+    courseActions.saveCourse(course).then(() => {
       props.history.push("/courses");
       toast.success("Course Saved");
     });

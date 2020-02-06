@@ -40,4 +40,8 @@ CoursesList.propTypes = {
   ).isRequired
 };
 
+CoursesList.defaultProps = {
+  courses: []
+};
+
 export default CoursesList;
