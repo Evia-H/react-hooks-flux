@@ -2,7 +2,7 @@
   "courses": [
     {
       "id": 1,
-      "title": "Securing React Apps with Auth0",
+      "title": "Securing React Apps with Auth0123",
       "slug": "react-auth0-authentication-security",
       "authorId": 1,
       "category": "JavaScript"
@@ -69,54 +69,6 @@
       "slug": "web-components-shadow-dom",
       "authorId": 1,
       "category": "HTML5"
-    },
-    {
-      "id": 11,
-      "slug": "fasdf",
-      "title": "fasdf",
-      "authorId": 1,
-      "category": "fasdfas",
-      "createdAt": 1580987354185
-    },
-    {
-      "id": 12,
-      "slug": "asdga",
-      "title": "asdga",
-      "authorId": 1,
-      "category": "asdfads",
-      "createdAt": 1580987793247
-    },
-    {
-      "id": 13,
-      "slug": "fasdf",
-      "title": "fasdf",
-      "authorId": 1,
-      "category": "asdfasd",
-      "createdAt": 1580987804535
-    },
-    {
-      "id": 14,
-      "slug": "vsdfv",
-      "title": "vsdfv",
-      "authorId": 1,
-      "category": "bfbfbf",
-      "createdAt": 1580988064052
-    },
-    {
-      "id": 15,
-      "slug": "vvdsvsdvsdvs",
-      "title": " vvdsvsdvsdvs",
-      "authorId": 1,
-      "category": "nnnnnnnn",
-      "createdAt": 1580988287481
-    },
-    {
-      "id": 16,
-      "slug": "mkhjgmg",
-      "title": "mkhjgmg",
-      "authorId": 1,
-      "category": "nfgnfgnfgn",
-      "createdAt": 1580988452041
     }
   ],
   "authors": [
