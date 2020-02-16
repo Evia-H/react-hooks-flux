@@ -17,6 +17,14 @@ function CoursesList(props) {
           return (
             <tr key={course.id}>
               <td>
+                <button
+                  className="btn btn-outline-danger"
+                  onClick={() => props.deleteCourse(course.id)}
+                >
+                  Delete
+                </button>
+              </td>
+              <td>
                 <Link to={`/course/${course.slug}`}>{course.title}</Link>
               </td>
               <td>{course.authorId}</td>
